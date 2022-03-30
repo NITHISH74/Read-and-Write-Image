@@ -20,66 +20,71 @@ Use imwrite(filename, image) to write the image.
 End the program and close the output image windows.
 ## Program:
 ```python
-# Developed By:
-# Register Number
+# Developed By: NITHISHWAR S
+# Register Number: 212221230071
+
 # To Read,display the image
 
-
+import cv2
+color= cv2.imread('spidy.jpg',-1)
+cv2.imshow('Ragul AC 212221240042',color)
+cv2.waitKey(0)
 
 
 # To write the image
 
-
-
-
+import cv2
+color= cv2.imread('spidy.jpg',-1)
+cv2.imwrite('spidy.jpg',color)
 
 # Find the shape of the Image
-
-
-
+import cv2
+color=cv2.imread('spidy.jpg',1)
+print(color.shape)
 
 # To access rows and columns
 
-
-
+import cv2
+import random
+img= cv2.imread('spidy.jpg',-1)
+for i in range(300):
+    for j in range(img.shape[1]):
+        img[i][j] = [random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+cv2.imshow('Ragul AC 212221240042',img)
+cv2.waitKey(0)
 
 
 # To cut and paste portion of image
 
 
-
-
-
-
-
-
-
+import cv2
+img= cv2.imread('spidy.jpg',-1)
+tag = img[200:450,200:450]
+img[150:400,150:400] = tag
+cv2.imshow('Ragul AC 212221240042',img)
+cv2.waitKey(0)
 
 ```
 ## Output:
 
 ### i) Read and display the image
+<br>
 
-<br>
-<br>
 
 ### ii)Write the image
+<br>
 
-<br>
-<br>
 
 ### iii)Shape of the Image
 
 <br>
-<br>
 
 ### iv)Access rows and columns
-<br>
 <br>
 
 ### v)Cut and paste portion of image
 <br>
-<br>
+
 
 ## Result:
 Thus the images are read, displayed, and written successfully using the python program.
